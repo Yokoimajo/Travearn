@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16CF1D0BE41700617B02 /* AppDelegate.swift */; };
+		284B16D21D0BE41700617B02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16D11D0BE41700617B02 /* ViewController.swift */; };
+		284B16D51D0BE41700617B02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B16D31D0BE41700617B02 /* Main.storyboard */; };
+		284B16D71D0BE41700617B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284B16D61D0BE41700617B02 /* Assets.xcassets */; };
+		284B16DA1D0BE41700617B02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B16D81D0BE41700617B02 /* LaunchScreen.storyboard */; };
+		284B16E51D0BE41700617B02 /* TravearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16E41D0BE41700617B02 /* TravearnTests.swift */; };
+		284B16F01D0BE41800617B02 /* TravearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16EF1D0BE41800617B02 /* TravearnUITests.swift */; };
+		284B17381D0BFE1B00617B02 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284B17371D0BFE1B00617B02 /* icon.jpg */; };
+		285B85CB1D10E81000225568 /* CollectionViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B85C91D10E81000225568 /* CollectionViewControllerCell.swift */; };
+		285B85CC1D10E81000225568 /* CollectionViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285B85CA1D10E81000225568 /* CollectionViewControllerCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		284B16E11D0BE41700617B02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284B16C41D0BE41700617B02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 284B16CB1D0BE41700617B02;
+			remoteInfo = Travearn;
+		};
+		284B16EC1D0BE41700617B02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284B16C41D0BE41700617B02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 284B16CB1D0BE41700617B02;
+			remoteInfo = Travearn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		284B16CC1D0BE41700617B02 /* Travearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		284B16CF1D0BE41700617B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		284B16D11D0BE41700617B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		284B16D41D0BE41700617B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		284B16D61D0BE41700617B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		284B16D91D0BE41700617B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		284B16DB1D0BE41700617B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284B16E01D0BE41700617B02 /* TravearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		284B16E41D0BE41700617B02 /* TravearnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravearnTests.swift; sourceTree = "<group>"; };
+		284B16E61D0BE41700617B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284B16EB1D0BE41700617B02 /* TravearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		284B16EF1D0BE41800617B02 /* TravearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravearnUITests.swift; sourceTree = "<group>"; };
+		284B16F11D0BE41800617B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284B17371D0BFE1B00617B02 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = "../../鬼/Calculator/icon.jpg"; sourceTree = "<group>"; };
+		285B85C91D10E81000225568 /* CollectionViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerCell.swift; sourceTree = "<group>"; };
+		285B85CA1D10E81000225568 /* CollectionViewControllerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewControllerCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		284B16C91D0BE41700617B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16DD1D0BE41700617B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16E81D0BE41700617B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284B16C31D0BE41700617B02 = {
+			isa = PBXGroup;
+			children = (
+				284B16CE1D0BE41700617B02 /* Travearn */,
+				284B16E31D0BE41700617B02 /* TravearnTests */,
+				284B16EE1D0BE41800617B02 /* TravearnUITests */,
+				284B16CD1D0BE41700617B02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		284B16CD1D0BE41700617B02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				284B16CC1D0BE41700617B02 /* Travearn.app */,
+				284B16E01D0BE41700617B02 /* TravearnTests.xctest */,
+				284B16EB1D0BE41700617B02 /* TravearnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		284B16CE1D0BE41700617B02 /* Travearn */ = {
+			isa = PBXGroup;
+			children = (
+				284B16CF1D0BE41700617B02 /* AppDelegate.swift */,
+				284B16D11D0BE41700617B02 /* ViewController.swift */,
+				284B16D31D0BE41700617B02 /* Main.storyboard */,
+				284B16D61D0BE41700617B02 /* Assets.xcassets */,
+				284B16D81D0BE41700617B02 /* LaunchScreen.storyboard */,
+				284B16DB1D0BE41700617B02 /* Info.plist */,
+				284B17371D0BFE1B00617B02 /* icon.jpg */,
+				285B85C91D10E81000225568 /* CollectionViewControllerCell.swift */,
+				285B85CA1D10E81000225568 /* CollectionViewControllerCell.xib */,
+			);
+			path = Travearn;
+			sourceTree = "<group>";
+		};
+		284B16E31D0BE41700617B02 /* TravearnTests */ = {
+			isa = PBXGroup;
+			children = (
+				284B16E41D0BE41700617B02 /* TravearnTests.swift */,
+				284B16E61D0BE41700617B02 /* Info.plist */,
+			);
+			path = TravearnTests;
+			sourceTree = "<group>";
+		};
+		284B16EE1D0BE41800617B02 /* TravearnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				284B16EF1D0BE41800617B02 /* TravearnUITests.swift */,
+				284B16F11D0BE41800617B02 /* Info.plist */,
+			);
+			path = TravearnUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		284B16CB1D0BE41700617B02 /* Travearn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284B16F41D0BE41800617B02 /* Build configuration list for PBXNativeTarget "Travearn" */;
+			buildPhases = (
+				284B16C81D0BE41700617B02 /* Sources */,
+				284B16C91D0BE41700617B02 /* Frameworks */,
+				284B16CA1D0BE41700617B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Travearn;
+			productName = Travearn;
+			productReference = 284B16CC1D0BE41700617B02 /* Travearn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		284B16DF1D0BE41700617B02 /* TravearnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284B16F71D0BE41800617B02 /* Build configuration list for PBXNativeTarget "TravearnTests" */;
+			buildPhases = (
+				284B16DC1D0BE41700617B02 /* Sources */,
+				284B16DD1D0BE41700617B02 /* Frameworks */,
+				284B16DE1D0BE41700617B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				284B16E21D0BE41700617B02 /* PBXTargetDependency */,
+			);
+			name = TravearnTests;
+			productName = TravearnTests;
+			productReference = 284B16E01D0BE41700617B02 /* TravearnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		284B16EA1D0BE41700617B02 /* TravearnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284B16FA1D0BE41800617B02 /* Build configuration list for PBXNativeTarget "TravearnUITests" */;
+			buildPhases = (
+				284B16E71D0BE41700617B02 /* Sources */,
+				284B16E81D0BE41700617B02 /* Frameworks */,
+				284B16E91D0BE41700617B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				284B16ED1D0BE41700617B02 /* PBXTargetDependency */,
+			);
+			name = TravearnUITests;
+			productName = TravearnUITests;
+			productReference = 284B16EB1D0BE41700617B02 /* TravearnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		284B16C41D0BE41700617B02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = YokoImajo;
+				TargetAttributes = {
+					284B16CB1D0BE41700617B02 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 86WWW48758;
+					};
+					284B16DF1D0BE41700617B02 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 86WWW48758;
+						TestTargetID = 284B16CB1D0BE41700617B02;
+					};
+					284B16EA1D0BE41700617B02 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 86WWW48758;
+						TestTargetID = 284B16CB1D0BE41700617B02;
+					};
+				};
+			};
+			buildConfigurationList = 284B16C71D0BE41700617B02 /* Build configuration list for PBXProject "Travearn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 284B16C31D0BE41700617B02;
+			productRefGroup = 284B16CD1D0BE41700617B02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				284B16CB1D0BE41700617B02 /* Travearn */,
+				284B16DF1D0BE41700617B02 /* TravearnTests */,
+				284B16EA1D0BE41700617B02 /* TravearnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		284B16CA1D0BE41700617B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284B17381D0BFE1B00617B02 /* icon.jpg in Resources */,
+				285B85CC1D10E81000225568 /* CollectionViewControllerCell.xib in Resources */,
+				284B16DA1D0BE41700617B02 /* LaunchScreen.storyboard in Resources */,
+				284B16D71D0BE41700617B02 /* Assets.xcassets in Resources */,
+				284B16D51D0BE41700617B02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16DE1D0BE41700617B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16E91D0BE41700617B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		284B16C81D0BE41700617B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284B16D21D0BE41700617B02 /* ViewController.swift in Sources */,
+				285B85CB1D10E81000225568 /* CollectionViewControllerCell.swift in Sources */,
+				284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16DC1D0BE41700617B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284B16E51D0BE41700617B02 /* TravearnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284B16E71D0BE41700617B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284B16F01D0BE41800617B02 /* TravearnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		284B16E21D0BE41700617B02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 284B16CB1D0BE41700617B02 /* Travearn */;
+			targetProxy = 284B16E11D0BE41700617B02 /* PBXContainerItemProxy */;
+		};
+		284B16ED1D0BE41700617B02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 284B16CB1D0BE41700617B02 /* Travearn */;
+			targetProxy = 284B16EC1D0BE41700617B02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		284B16D31D0BE41700617B02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				284B16D41D0BE41700617B02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		284B16D81D0BE41700617B02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				284B16D91D0BE41700617B02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		284B16F21D0BE41800617B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		284B16F31D0BE41800617B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		284B16F51D0BE41800617B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Travearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.Travearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		284B16F61D0BE41800617B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Travearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.Travearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		284B16F81D0BE41800617B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TravearnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.TravearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travearn.app/Travearn";
+			};
+			name = Debug;
+		};
+		284B16F91D0BE41800617B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TravearnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.TravearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travearn.app/Travearn";
+			};
+			name = Release;
+		};
+		284B16FB1D0BE41800617B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TravearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.TravearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Travearn;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		284B16FC1D0BE41800617B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TravearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.TravearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Travearn;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		284B16C71D0BE41700617B02 /* Build configuration list for PBXProject "Travearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284B16F21D0BE41800617B02 /* Debug */,
+				284B16F31D0BE41800617B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284B16F41D0BE41800617B02 /* Build configuration list for PBXNativeTarget "Travearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284B16F51D0BE41800617B02 /* Debug */,
+				284B16F61D0BE41800617B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284B16F71D0BE41800617B02 /* Build configuration list for PBXNativeTarget "TravearnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284B16F81D0BE41800617B02 /* Debug */,
+				284B16F91D0BE41800617B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284B16FA1D0BE41800617B02 /* Build configuration list for PBXNativeTarget "TravearnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284B16FB1D0BE41800617B02 /* Debug */,
+				284B16FC1D0BE41800617B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 284B16C41D0BE41700617B02 /* Project object */;
+}
