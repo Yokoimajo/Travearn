@@ -1,41 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TnY-o3-A1t">
-                                <rect key="frame" x="119" y="216" width="82" height="75"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <segue destination="Uhb-EW-TMu" kind="modal" id="jq0-ne-9SN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="282" y="297"/>
-        </scene>
-        <!--travearn-->
+        <!--traveget-->
         <scene sceneID="MEL-KM-YdK">
             <objects>
-                <collectionViewController id="kdB-Xe-m6x" sceneMemberID="viewController">
+                <collectionViewController id="kdB-Xe-m6x" customClass="CollectionViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="avk-QF-Q3d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,8 +19,8 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bpl-tY-IcK">
-                                <rect key="frame" x="0.0" y="64" width="146" height="158"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bpl-tY-IcK" customClass="CollectionViewCell" customModule="Travearn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="146" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="146" height="158"/>
@@ -72,7 +45,7 @@
                             <outlet property="delegate" destination="kdB-Xe-m6x" id="C4c-rs-JlK"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="travearn" id="4SX-wY-sJt">
+                    <navigationItem key="navigationItem" title="traveget" id="4SX-wY-sJt">
                         <barButtonItem key="leftBarButtonItem" title="買ってくる" id="289-iU-7Py">
                             <connections>
                                 <segue destination="xkH-xb-0hy" kind="push" id="nPO-X0-MwC"/>
@@ -93,12 +66,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2s-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="297"/>
+            <point key="canvasLocation" x="1052" y="297"/>
         </scene>
         <!--注文-->
         <scene sceneID="bAX-T5-OyO">
             <objects>
-                <viewController id="2Hy-Zm-sck" sceneMemberID="viewController">
+                <viewController id="2Hy-Zm-sck" customClass="OrderPageViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ArG-an-GL2"/>
                         <viewControllerLayoutGuide type="bottom" id="3jK-ii-93t"/>
@@ -154,12 +127,22 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbX-9e-3lZ">
                                 <rect key="frame" x="85" y="463" width="150" height="30"/>
                                 <state key="normal" title="注文マーケットに出す"/>
+                                <connections>
+                                    <action selector="saveOrderInfo" destination="2Hy-Zm-sck" eventType="touchUpInside" id="Jj5-VA-63G"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="Hcv-fo-ltT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="注文" id="xi2-Zu-rH0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="descriptiontextfield" destination="dfj-Ow-w7J" id="oze-dw-5RS"/>
+                        <outlet property="placetextfield" destination="MIe-7W-aZ2" id="t8E-7D-HJD"/>
+                        <outlet property="pricetextfield" destination="QZd-PW-FbQ" id="lKv-0y-g1g"/>
+                        <outlet property="sizetextfield" destination="CR1-uX-jIo" id="Ht2-ll-usI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypl-kX-bLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +151,7 @@
         <!--買ってくる-->
         <scene sceneID="9DT-VW-Wo5">
             <objects>
-                <viewController id="xkH-xb-0hy" sceneMemberID="viewController">
+                <viewController id="xkH-xb-0hy" customClass="BuyLocationViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eS9-Qa-C0z"/>
                         <viewControllerLayoutGuide type="bottom" id="frS-10-Idz"/>
@@ -182,16 +165,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-Bg-qp8">
-                                <rect key="frame" x="48" y="408" width="225" height="30"/>
-                                <state key="normal" title="この場所の注文マーケットを見る"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23F-Oq-hz3">
                                 <rect key="frame" x="20" y="184" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-Bg-qp8">
+                                <rect key="frame" x="54" y="420" width="225" height="30"/>
+                                <state key="normal" title="この場所の注文マーケットを見る"/>
+                                <connections>
+                                    <segue destination="rOV-zt-rJl" kind="push" id="INt-io-orY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -202,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="1462" y="602"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--買ってくる@- -->
         <scene sceneID="hLr-Ou-cnP">
             <objects>
-                <collectionViewController id="rOV-zt-rJl" sceneMemberID="viewController">
+                <collectionViewController id="rOV-zt-rJl" customClass="BuyCollectionViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lMK-qb-iCx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +210,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="wCF-GH-arZ" kind="modal" id="uKs-jB-dzu"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -231,11 +220,98 @@
                             <outlet property="delegate" destination="rOV-zt-rJl" id="m7U-o3-6gF"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="買ってくる@---" id="Kwb-kE-XNB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNf-r4-W5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="602"/>
+            <point key="canvasLocation" x="2259" y="602"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CCR-Sv-uOU">
+            <objects>
+                <viewController id="wCF-GH-arZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Don-GV-Z33"/>
+                        <viewControllerLayoutGuide type="bottom" id="NI0-9y-Zb4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DVU-fk-zGt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OR9-a6-e2I">
+                                <rect key="frame" x="0.0" y="20" width="320" height="253"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-an-S96">
+                                <rect key="frame" x="19" y="312" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlB-2Y-nL6">
+                                <rect key="frame" x="19" y="353" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69e-9U-ry4">
+                                <rect key="frame" x="19" y="409" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-Jc-JTh">
+                                <rect key="frame" x="123" y="518" width="75" height="30"/>
+                                <state key="normal" title="買ってくる"/>
+                                <connections>
+                                    <segue destination="taO-P4-UA7" kind="modal" id="dsz-Fx-4Lr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg0-88-Hz5">
+                                <rect key="frame" x="20" y="464" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOx-84-rFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="602"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EIr-o8-kgl">
+            <objects>
+                <viewController id="taO-P4-UA7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Vc-kA-U2S"/>
+                        <viewControllerLayoutGuide type="bottom" id="CpV-c1-t2U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dnZ-Hq-rt6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5MY-8X-sfU">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFt-4d-fbg">
+                                <rect key="frame" x="100" y="492" width="120" height="30"/>
+                                <state key="normal" title="メイン画面に戻る"/>
+                                <connections>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="O7u-gK-IOW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtD-8t-64j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3066" y="602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sgN-qf-cRK">
@@ -256,8 +332,28 @@
             </objects>
             <point key="canvasLocation" x="660" y="297"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9aE-6S-FuY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tll-g0-8Ol" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mvl-z6-e3a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rOV-zt-rJl" kind="relationship" relationship="rootViewController" id="lMg-y2-kzR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Er5-T9-gLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="602"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="icon.jpg" width="1024" height="1024"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="INt-io-orY"/>
+        <segue reference="Hcv-fo-ltT"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,8 +1,8 @@
 //
-//  CollectionViewControllerCell.swift
+//  BuyCollectionViewController.swift
 //  Travearn
 //
-//  Created by Yoko Imajo on 6/15/16.
+//  Created by Yoko Imajo on 6/20/16.
 //  Copyright © 2016 YokoImajo. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewControllerCell: UICollectionViewController {
-    
+class BuyCollectionViewController: UICollectionViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -90,5 +90,5 @@ class CollectionViewControllerCell: UICollectionViewController {
     
     }
     */
-    
+
 }
