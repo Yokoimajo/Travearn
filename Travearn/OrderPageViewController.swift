@@ -27,13 +27,13 @@ class OrderPageViewController: UIViewController {
     }
 
         @IBAction func saveOrderInfo(){
-            let wordDictionary =
+            _ =
             ["description":descriptiontextfield.text, "place":placetextfield.text, "size":sizetextfield.text, "price":pricetextfield.text]
             
-            wordArray.append(wordDictionary)
+            wordArray.append("ここにタイプしてください")
             saveData.setObject(wordArray, forKey: "WORD")
             
-            let alert = UIAlertController
+            let alert = UIAlertController.self(
             title: "登録完了",
             message: "注文が完了しました",
             preferredStyle: UIAlertControllerStyle.Alert)

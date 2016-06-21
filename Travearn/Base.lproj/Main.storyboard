@@ -66,7 +66,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2s-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="297"/>
+            <point key="canvasLocation" x="1864" y="297"/>
         </scene>
         <!--注文-->
         <scene sceneID="bAX-T5-OyO">
@@ -129,13 +129,21 @@
                                 <state key="normal" title="注文マーケットに出す"/>
                                 <connections>
                                     <action selector="saveOrderInfo" destination="2Hy-Zm-sck" eventType="touchUpInside" id="Jj5-VA-63G"/>
-                                    <segue destination="kdB-Xe-m6x" kind="push" id="Hcv-fo-ltT"/>
+                                    <segue destination="kdB-Xe-m6x" kind="modal" id="Ap3-xe-4oe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="もどる" id="zfF-DG-HC1">
+                            <connections>
+                                <segue destination="kdB-Xe-m6x" kind="push" id="yEC-cb-C44"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="注文" id="xi2-Zu-rH0"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="descriptiontextfield" destination="dfj-Ow-w7J" id="oze-dw-5RS"/>
@@ -146,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypl-kX-bLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-141"/>
+            <point key="canvasLocation" x="2274" y="-141"/>
         </scene>
         <!--買ってくる-->
         <scene sceneID="9DT-VW-Wo5">
@@ -313,6 +321,36 @@
             </objects>
             <point key="canvasLocation" x="3066" y="602"/>
         </scene>
+        <!--Initial Screen View Controller-->
+        <scene sceneID="YSy-bK-lfn">
+            <objects>
+                <viewController id="AJW-V8-CFF" customClass="InitialScreenViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JtP-Wz-Sw4"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5F-WJ-4Bq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ou-k4-KFF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-qW-GwA">
+                                <rect key="frame" x="130" y="269" width="60" height="30"/>
+                                <state key="normal" title="注文する"/>
+                                <connections>
+                                    <action selector="startButtonTapped" destination="AJW-V8-CFF" eventType="touchUpInside" id="39M-dK-4PI"/>
+                                    <segue destination="2Hy-Zm-sck" kind="modal" id="otq-7m-mDd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JNa-Wy-2Fw"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5a-TN-Uz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="-81"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sgN-qf-cRK">
             <objects>
@@ -354,6 +392,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="INt-io-orY"/>
-        <segue reference="Hcv-fo-ltT"/>
+        <segue reference="Ap3-xe-4oe"/>
+        <segue reference="otq-7m-mDd"/>
     </inferredMetricsTieBreakers>
 </document>

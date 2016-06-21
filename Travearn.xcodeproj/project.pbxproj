@@ -13,6 +13,7 @@
 		280307E81D181BBA006D7A6A /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E71D181BBA006D7A6A /* OrderPageViewController.swift */; };
 		280307EA1D181BD7006D7A6A /* BuyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E91D181BD7006D7A6A /* BuyLocationViewController.swift */; };
 		280307EC1D181BFB006D7A6A /* BuyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307EB1D181BFB006D7A6A /* BuyCollectionViewController.swift */; };
+		280308281D196BD8006D7A6A /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280308271D196BD8006D7A6A /* InitialScreenViewController.swift */; };
 		284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16CF1D0BE41700617B02 /* AppDelegate.swift */; };
 		284B16D21D0BE41700617B02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16D11D0BE41700617B02 /* ViewController.swift */; };
 		284B16D51D0BE41700617B02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B16D31D0BE41700617B02 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		280307E71D181BBA006D7A6A /* OrderPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderPageViewController.swift; sourceTree = "<group>"; };
 		280307E91D181BD7006D7A6A /* BuyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyLocationViewController.swift; sourceTree = "<group>"; };
 		280307EB1D181BFB006D7A6A /* BuyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyCollectionViewController.swift; sourceTree = "<group>"; };
+		280308271D196BD8006D7A6A /* InitialScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		284B16CC1D0BE41700617B02 /* Travearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		284B16CF1D0BE41700617B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		284B16D11D0BE41700617B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				284B16CF1D0BE41700617B02 /* AppDelegate.swift */,
 				284B16D11D0BE41700617B02 /* ViewController.swift */,
 				284B16D31D0BE41700617B02 /* Main.storyboard */,
+				280308271D196BD8006D7A6A /* InitialScreenViewController.swift */,
 				284B16D61D0BE41700617B02 /* Assets.xcassets */,
 				284B16D81D0BE41700617B02 /* LaunchScreen.storyboard */,
 				284B16DB1D0BE41700617B02 /* Info.plist */,
@@ -285,6 +288,7 @@
 				280307E81D181BBA006D7A6A /* OrderPageViewController.swift in Sources */,
 				280307EA1D181BD7006D7A6A /* BuyLocationViewController.swift in Sources */,
 				284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */,
+				280308281D196BD8006D7A6A /* InitialScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +429,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Travearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.Travearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,9 +442,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Travearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yokoimajo.Travearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
