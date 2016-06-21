@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AJW-V8-CFF">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
@@ -58,7 +57,7 @@
                                 <state key="normal" title="注文する"/>
                             </button>
                             <connections>
-                                <segue destination="2Hy-Zm-sck" kind="push" id="Wt0-k5-yCR"/>
+                                <segue destination="2Hy-Zm-sck" kind="push" id="X4n-rm-HA2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,7 +65,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2s-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="297"/>
+            <point key="canvasLocation" x="1764" y="-60"/>
         </scene>
         <!--注文-->
         <scene sceneID="bAX-T5-OyO">
@@ -129,18 +128,14 @@
                                 <state key="normal" title="注文マーケットに出す"/>
                                 <connections>
                                     <action selector="saveOrderInfo" destination="2Hy-Zm-sck" eventType="touchUpInside" id="Jj5-VA-63G"/>
-                                    <segue destination="kdB-Xe-m6x" kind="modal" id="Ap3-xe-4oe"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="HGD-qA-2ys"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="もどる" id="zfF-DG-HC1">
-                            <connections>
-                                <segue destination="kdB-Xe-m6x" kind="push" id="yEC-cb-C44"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem title="もどる" id="zfF-DG-HC1"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="注文" id="xi2-Zu-rH0"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -154,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypl-kX-bLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="-141"/>
+            <point key="canvasLocation" x="2214" y="-445"/>
         </scene>
         <!--買ってくる-->
         <scene sceneID="9DT-VW-Wo5">
@@ -194,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fno-wZ-4y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="602"/>
+            <point key="canvasLocation" x="2088" y="602"/>
         </scene>
         <!--買ってくる@- -->
         <scene sceneID="hLr-Ou-cnP">
@@ -233,7 +228,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNf-r4-W5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2259" y="602"/>
+            <point key="canvasLocation" x="2865" y="610"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CCR-Sv-uOU">
@@ -288,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOx-84-rFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2694" y="602"/>
+            <point key="canvasLocation" x="3216" y="610"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EIr-o8-kgl">
@@ -308,9 +303,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFt-4d-fbg">
                                 <rect key="frame" x="100" y="492" width="120" height="30"/>
                                 <state key="normal" title="メイン画面に戻る"/>
-                                <connections>
-                                    <segue destination="kdB-Xe-m6x" kind="push" id="O7u-gK-IOW"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -319,7 +311,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HtD-8t-64j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066" y="602"/>
+            <point key="canvasLocation" x="3770" y="602"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="KIl-ye-3xj">
+            <objects>
+                <viewController id="RZp-J9-6u2" customClass="LogInViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="luh-jt-E3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hhx-Rl-g81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cDI-PZ-ms0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4m-Ur-eUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-243"/>
         </scene>
         <!--Initial Screen View Controller-->
         <scene sceneID="YSy-bK-lfn">
@@ -337,7 +348,6 @@
                                 <rect key="frame" x="130" y="269" width="60" height="30"/>
                                 <state key="normal" title="注文する"/>
                                 <connections>
-                                    <action selector="startButtonTapped" destination="AJW-V8-CFF" eventType="touchUpInside" id="39M-dK-4PI"/>
                                     <segue destination="2Hy-Zm-sck" kind="modal" id="otq-7m-mDd"/>
                                 </connections>
                             </button>
@@ -349,26 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5a-TN-Uz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="-81"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sgN-qf-cRK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uhb-EW-TMu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ua5-YU-JCs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kdB-Xe-m6x" kind="relationship" relationship="rootViewController" id="ALu-gY-yyB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m9k-sP-UhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="660" y="297"/>
+            <point key="canvasLocation" x="666" y="-80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9aE-6S-FuY">
@@ -387,12 +378,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Er5-T9-gLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="602"/>
+            <point key="canvasLocation" x="2484" y="602"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jrb-We-w7w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pnC-CL-GwS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PzS-rX-WgH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fgC-Dh-y4P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kdB-Xe-m6x" kind="relationship" relationship="rootViewController" id="Yac-jA-iqv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0u-T7-CBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="-94"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="INt-io-orY"/>
-        <segue reference="Ap3-xe-4oe"/>
-        <segue reference="otq-7m-mDd"/>
+        <segue reference="HGD-qA-2ys"/>
+        <segue reference="X4n-rm-HA2"/>
     </inferredMetricsTieBreakers>
 </document>

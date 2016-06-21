@@ -1,0 +1,6 @@
+framework module Pods_Travearn {
+  umbrella header "Pods-Travearn-umbrella.h"
+
+  export *
+  module * { export * }
+}

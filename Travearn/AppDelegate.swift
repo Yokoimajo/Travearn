@@ -7,6 +7,49 @@
 //
 
 import UIKit
+import NCMB
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+    //********** APIキーの設定 **********
+    let applicationkey = "63a1892a22bcb014ff3cb3f79b8f5523f38a643b4b754438497ffb0ec0a0d844"
+    let clientkey      = "9fba51c047bff92b69a41b483f2d8fb1bfe4859e697769d8004eb78c73d40667"
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        //********** SDKの初期化 **********
+        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
+        //▼▼▼起動時に処理される▼▼▼
+        
+        //▲▲▲起動時に処理される▲▲▲
+        return true
+    }
+}
+
+//********** データストアにデータを保存 **********
+let query = NCMBQuery(className: "TestClass")
+query.whereKey("message", equalTo: "Hello, NCMB!")
+query.findObjectsInBackgroundWithBlock{(NSArray objects, NSError error) in
+    if error == nil {
+        if objects.count > 0 {
+            let message = objects[0].objectForKey("message") as! NSString
+            print("[FIND] \(message)")
+        } else {
+            var saveError: NSError?
+            let obj = NCMBObject(className: "TestClass")
+            obj.setObject("Hello, NCMB!", forKey: "message")
+            obj.save(&saveError)
+            if saveError == nil {
+                print("[SAVE] Done.")
+            } else {
+                print("[SAVE ERROR] \(saveError)")
+            }
+        }
+    } else {
+        print(error.localizedDescription)
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

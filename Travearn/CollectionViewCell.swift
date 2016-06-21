@@ -15,7 +15,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var pricelabel: UILabel!
     
     
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
