@@ -16,11 +16,15 @@ class CollectionViewController: UICollectionViewController {
     var wordArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
     
-        collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "cell")
-    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad(
+
+    
+            collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "cell"){
+
+            
     
         override func viewWillAppear(animated: Bool){
             super.viewWillAppear(animated)

@@ -25,6 +25,7 @@ class OrderPageViewController: UIViewController {
             wordArray = saveData.arrayForKey("WORD")!
         }
     }
+    
 
         @IBAction func saveOrderInfo(){
             let wordDictionary =
@@ -51,6 +52,7 @@ class OrderPageViewController: UIViewController {
             pricetextfield.text = ""
             
         }
+    
 
         
         // Do any additional setup after loading the view.

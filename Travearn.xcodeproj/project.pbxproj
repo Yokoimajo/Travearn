@@ -125,6 +125,7 @@
 		281CB5101D1ACE5C008E30B3 /* Membership */ = {
 			isa = PBXGroup;
 			children = (
+				281CB5091D1ABE94008E30B3 /* Travearn-Bridging-Header.h */,
 				281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */,
 				281CB50E1D1AC404008E30B3 /* LogOutViewController.swift */,
 				2869E6C21D1993EF000CD563 /* LogInViewController.swift */,
@@ -160,7 +161,6 @@
 			children = (
 				281CB5101D1ACE5C008E30B3 /* Membership */,
 				284B16CF1D0BE41700617B02 /* AppDelegate.swift */,
-				281CB5091D1ABE94008E30B3 /* Travearn-Bridging-Header.h */,
 				284B16D11D0BE41700617B02 /* ViewController.swift */,
 				284B16D31D0BE41700617B02 /* Main.storyboard */,
 				280308271D196BD8006D7A6A /* InitialScreenViewController.swift */,
