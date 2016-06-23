@@ -17,22 +17,18 @@ class CollectionViewController: UICollectionViewController {
     let saveData = NSUserDefaults.standardUserDefaults()
     
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad(
-
-    
-            collectionView.registerNib(UINib(nibName: "CollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "cell"){
-
-            
+        super.viewDidLoad()
+        collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        
     
         override func viewWillAppear(animated: Bool){
             super.viewWillAppear(animated)
             if saveData.arrayForKey("WORD") != nil {
                 wordArray = saveData.arrayForKey("WORD")!
             }
-            collectionView!.reloadData()
-            }
+            collectionView.reloadData()
+                }
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -71,7 +67,7 @@ class CollectionViewController: UICollectionViewController {
     }
 
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) 
     
     let nowIndexPathDictionary: (AnyObject) = wordArray [indexPath.row]
     
@@ -82,7 +78,8 @@ class CollectionViewController: UICollectionViewController {
     
     return cell
 
-    
+}
+
         // Configure the cell
 
 
