@@ -22,7 +22,7 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad(
 
     
-            collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "cell"){
+            collectionView.registerNib(UINib(nibName: "CollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "cell"){
 
             
     
@@ -82,7 +82,6 @@ class CollectionViewController: UICollectionViewController {
     
     return cell
 
-}
     
         // Configure the cell
 
