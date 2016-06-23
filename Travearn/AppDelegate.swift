@@ -10,6 +10,7 @@ import UIKit
 import NCMB
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     //********** APIキーの設定 **********
@@ -46,12 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return true
-
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
         
     }
     func applicationWillResignActive(application: UIApplication) {
@@ -78,4 +73,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    }}
+    }
