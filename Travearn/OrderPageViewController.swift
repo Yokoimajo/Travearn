@@ -29,6 +29,7 @@ class OrderPageViewController: UIViewController {
 
         @IBAction func saveOrderInfo(){
             let wordDictionary =
+            
             ["description":descriptiontextfield.text, "place":placetextfield.text, "size":sizetextfield.text, "price":pricetextfield.text]
             
             wordArray.append("ここにタイプしてください")

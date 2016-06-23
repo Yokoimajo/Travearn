@@ -117,5 +117,3 @@ class CollectionViewController: UICollectionViewController {
     
     }
     */
-
-}
