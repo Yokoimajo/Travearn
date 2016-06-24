@@ -11,13 +11,15 @@ import NCMB
 
 class CollectionViewCell: UICollectionViewCell {
     
-    // クラスのNCMBObjectを作成
-    let obj3 = NCMBObject(className: "TestClass")
+
     
     @IBOutlet var descriptionlabel: UILabel!
     @IBOutlet var placelabel: UILabel!
     @IBOutlet var sizelabel: UILabel!
     @IBOutlet var pricelabel: UILabel!
+    
+        // クラスのNCMBObjectを作成
+    let obj3 = NCMBObject(className: "TestClass")
     
     
     // objectIdプロパティを設定

@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "cell"
 
 class CollectionViewController: UICollectionViewController {
 
@@ -22,19 +22,15 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         
-        override func viewWillAppear(animated: Bool){
-            super.viewWillAppear(animated)
-            if saveData.arrayForKey("WORD") != nil {
-                wordArray = saveData.arrayForKey("WORD")!
-            }
-            collectionView.reloadData()
-                }
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
+        
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+    }
 
         // Do any additional setup after loading the view.
 
@@ -71,14 +67,12 @@ class CollectionViewController: UICollectionViewController {
     
     let nowIndexPathDictionary: (AnyObject) = wordArray [indexPath.row]
     
-    cell.descriptionlabel.text = nowIndexPathDictionary["description"] as? String
-    cell.placelabel.text = nowIndexPathDictionary["place"] as? String
-    cell.sizelabel.text = nowIndexPathDictionary["size"] as? String
-    cell.pricelabel.text = nowIndexPathDictionary["price"] as? String
     
     return cell
 
 }
+
+    }
 
         // Configure the cell
 

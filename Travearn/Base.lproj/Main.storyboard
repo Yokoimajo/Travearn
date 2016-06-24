@@ -18,7 +18,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bpl-tY-IcK" customClass="CollectionViewCell" customModule="Travearn" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="bpl-tY-IcK" customClass="CollectionViewCell" customModule="Travearn" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="146" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -667,9 +667,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4gq-Dm-a0Y"/>
-        <segue reference="otq-7m-mDd"/>
-        <segue reference="Yac-jA-iqv"/>
         <segue reference="INt-io-orY"/>
+        <segue reference="Yac-jA-iqv"/>
+        <segue reference="X4n-rm-HA2"/>
+        <segue reference="4gq-Dm-a0Y"/>
     </inferredMetricsTieBreakers>
 </document>

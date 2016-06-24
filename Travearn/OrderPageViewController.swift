@@ -71,6 +71,7 @@ class OrderPageViewController: UIViewController {
             pricetextfield.text = ""
 
         
+    }
         // Do any additional setup after loading the view.
 
     override func didReceiveMemoryWarning() {
