@@ -73,7 +73,6 @@ class LogInViewController: UIViewController {
         // キーボードを閉じる
         closeKeyboad()
         
-        self.performSegueWithIdentifier("loginToSignUp", sender: self)
         
     }
     

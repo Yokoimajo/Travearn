@@ -72,7 +72,7 @@ class SignUpViewController: UIViewController {
                 
             } else {
                 // 新規登録成功時の処理
-                self.performSegueWithIdentifier("signUp", sender: self)
+            
                 print("ログインに成功しました:\(user.objectId)")
                 
             }

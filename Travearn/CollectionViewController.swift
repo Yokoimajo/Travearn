@@ -13,19 +13,22 @@ import NCMB
 
 class CollectionViewController: UICollectionViewController {
     
+    
      var merchandiseObjectId: String!
+     var OrderArray: NSArray = NSArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.merchandiseObjectId = merchandiseData!.objectForKey("ObjectId") as String!
+        //self.merchandiseObjectId = merchandiseData!.objectForKey("ObjectId") as String!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         
-        collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        
         
     }
 
@@ -50,7 +53,7 @@ class CollectionViewController: UICollectionViewController {
 
    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 4
     }
 
     func loadOrderData(){
@@ -58,14 +61,13 @@ class CollectionViewController: UICollectionViewController {
         query.orderByAscending("createData")
         query.findObjectsInBackgroundWithBlock({(objects, error) in
             if error == nil{
-                if objects.count > 0{
+                if self.OrderArray.count > 0{
                     self.collectionView!.reloadData()
                 }
             }else{
                 print(error.localizedDescription)
         }
     })
-
     }
 
    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,13 +77,23 @@ class CollectionViewController: UICollectionViewController {
 
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
-     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
     
-     return cell
+    let obj = NCMBObject(className: "merchandise")
+    
+    cell.setsumeilabel.text = obj["setsumei"] as String?
+    cell.placelabel.text = obj["place"] as String?
+    cell.sizelabel.text = obj["size"] as String?
+    cell.pricelabel.text = obj["price"] as String?
+    
+    return cell
 }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
     }
+}
+
 
         // Configure the cell
 

@@ -20,7 +20,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="bpl-tY-IcK" customClass="CollectionViewCell" customModule="Travearn" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -33,7 +33,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tjd-b0-ZBL">
-                            <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
@@ -58,7 +58,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2s-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="228"/>
+            <point key="canvasLocation" x="1586" y="74"/>
         </scene>
         <!--注文-->
         <scene sceneID="bAX-T5-OyO">
@@ -121,7 +121,7 @@
                                 <state key="normal" title="注文マーケットに出す"/>
                                 <connections>
                                     <action selector="saveOrderInfo" destination="2Hy-Zm-sck" eventType="touchUpInside" id="Jj5-VA-63G"/>
-                                    <segue destination="rwh-Cy-K0o" kind="push" id="Ctk-56-cPR"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="bIZ-4H-mPv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,7 +151,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2355" y="228"/>
+            <point key="canvasLocation" x="2079" y="74"/>
         </scene>
         <!--買ってくる-->
         <scene sceneID="9DT-VW-Wo5">
@@ -531,7 +531,7 @@
                                 <rect key="frame" x="10" y="7" width="45" height="30"/>
                                 <state key="normal" title="もどる"/>
                                 <connections>
-                                    <segue destination="RZp-J9-6u2" kind="modal" id="jTm-Bu-1dd"/>
+                                    <segue destination="RZp-J9-6u2" kind="push" id="MrV-DG-8Io"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-pl-QMM">
@@ -554,6 +554,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="NTg-nw-T8a"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="errorLabel" destination="M3S-PK-FHd" id="Bqb-Va-9Ul"/>
                         <outlet property="passwordTextField" destination="AfT-mJ-HD9" id="DwG-ah-WSk"/>
@@ -568,7 +569,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="808" y="-755"/>
+            <point key="canvasLocation" x="816" y="-755"/>
         </scene>
         <!--Initial Screen View Controller-->
         <scene sceneID="YSy-bK-lfn">
@@ -616,7 +617,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCv-Lb-et6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-739"/>
+            <point key="canvasLocation" x="-34" y="-755"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="geO-qC-NHj">
@@ -635,13 +636,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbc-7I-I7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382" y="228"/>
+            <point key="canvasLocation" x="956" y="90"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ctk-56-cPR"/>
+        <segue reference="seh-ax-O3i"/>
+        <segue reference="MrV-DG-8Io"/>
+        <segue reference="bIZ-4H-mPv"/>
         <segue reference="rUI-gh-FYj"/>
         <segue reference="dsz-Fx-4Lr"/>
-        <segue reference="jTm-Bu-1dd"/>
     </inferredMetricsTieBreakers>
 </document>

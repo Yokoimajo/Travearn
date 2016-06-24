@@ -13,10 +13,11 @@ class CollectionViewCell: UICollectionViewCell {
     
 
     
-    @IBOutlet var descriptionlabel: UILabel!
+    @IBOutlet var setsumeilabel: UILabel!
     @IBOutlet var placelabel: UILabel!
     @IBOutlet var sizelabel: UILabel!
     @IBOutlet var pricelabel: UILabel!
+    
         // 取得に成功した場合の処理
     
     // (例)取得したデータの出力
