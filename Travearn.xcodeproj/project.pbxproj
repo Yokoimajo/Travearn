@@ -13,8 +13,6 @@
 		280307E01D15384D006D7A6A /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280307DE1D15384D006D7A6A /* CollectionViewCell.xib */; };
 		280307E61D181B03006D7A6A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E51D181B03006D7A6A /* CollectionViewController.swift */; };
 		280307E81D181BBA006D7A6A /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E71D181BBA006D7A6A /* OrderPageViewController.swift */; };
-		280307EA1D181BD7006D7A6A /* BuyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E91D181BD7006D7A6A /* BuyLocationViewController.swift */; };
-		280307EC1D181BFB006D7A6A /* BuyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307EB1D181BFB006D7A6A /* BuyCollectionViewController.swift */; };
 		280308281D196BD8006D7A6A /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280308271D196BD8006D7A6A /* InitialScreenViewController.swift */; };
 		281CB50D1D1AC3F1008E30B3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */; };
 		281CB50F1D1AC404008E30B3 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281CB50E1D1AC404008E30B3 /* LogOutViewController.swift */; };
@@ -55,8 +53,6 @@
 		280307DE1D15384D006D7A6A /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		280307E51D181B03006D7A6A /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		280307E71D181BBA006D7A6A /* OrderPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderPageViewController.swift; sourceTree = "<group>"; };
-		280307E91D181BD7006D7A6A /* BuyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyLocationViewController.swift; sourceTree = "<group>"; };
-		280307EB1D181BFB006D7A6A /* BuyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyCollectionViewController.swift; sourceTree = "<group>"; };
 		280308271D196BD8006D7A6A /* InitialScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		281CB5091D1ABE94008E30B3 /* Travearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travearn-Bridging-Header.h"; sourceTree = "<group>"; };
 		281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -171,8 +167,6 @@
 				280307DE1D15384D006D7A6A /* CollectionViewCell.xib */,
 				280307E51D181B03006D7A6A /* CollectionViewController.swift */,
 				280307E71D181BBA006D7A6A /* OrderPageViewController.swift */,
-				280307E91D181BD7006D7A6A /* BuyLocationViewController.swift */,
-				280307EB1D181BFB006D7A6A /* BuyCollectionViewController.swift */,
 			);
 			path = Travearn;
 			sourceTree = "<group>";
@@ -476,14 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				280307E61D181B03006D7A6A /* CollectionViewController.swift in Sources */,
-				280307EC1D181BFB006D7A6A /* BuyCollectionViewController.swift in Sources */,
 				2869E6C31D1993EF000CD563 /* LogInViewController.swift in Sources */,
 				284B16D21D0BE41700617B02 /* ViewController.swift in Sources */,
 				281CB50F1D1AC404008E30B3 /* LogOutViewController.swift in Sources */,
 				281CB50D1D1AC3F1008E30B3 /* SignUpViewController.swift in Sources */,
 				280307DF1D15384D006D7A6A /* CollectionViewCell.swift in Sources */,
 				280307E81D181BBA006D7A6A /* OrderPageViewController.swift in Sources */,
-				280307EA1D181BD7006D7A6A /* BuyLocationViewController.swift in Sources */,
 				284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */,
 				280308281D196BD8006D7A6A /* InitialScreenViewController.swift in Sources */,
 			);

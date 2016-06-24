@@ -22,6 +22,7 @@ class OrderPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if saveData.arrayForKey("WORD") != nil {
             wordArray = saveData.arrayForKey("WORD")!
         }
@@ -73,6 +74,11 @@ class OrderPageViewController: UIViewController {
         
     }
         // Do any additional setup after loading the view.
+    
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

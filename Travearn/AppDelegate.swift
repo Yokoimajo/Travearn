@@ -12,6 +12,7 @@ import NCMB
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     var window: UIWindow?
     
         //********** APIキーの設定 **********

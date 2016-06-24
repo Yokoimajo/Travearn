@@ -4,68 +4,61 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--traveget-->
+        <!--travget-->
         <scene sceneID="MEL-KM-YdK">
             <objects>
                 <collectionViewController id="kdB-Xe-m6x" customClass="CollectionViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="avk-QF-Q3d">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="2" dataMode="prototypes" id="avk-QF-Q3d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="USl-Gc-Fns">
-                            <size key="itemSize" width="146" height="158"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICX-7c-jhC">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="bpl-tY-IcK" customClass="CollectionViewCell" customModule="Travearn" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="146" height="158"/>
+                                <rect key="frame" x="0.0" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="146" height="158"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy7-iR-VfC">
-                                            <rect key="frame" x="14" y="129" width="45" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-jY-0wC">
-                                            <rect key="frame" x="8" y="8" width="130" height="121"/>
-                                        </imageView>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="xkH-xb-0hy" kind="modal" id="juq-mI-jJ3"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tjd-b0-ZBL">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="kdB-Xe-m6x" id="abV-K5-3wT"/>
                             <outlet property="delegate" destination="kdB-Xe-m6x" id="C4c-rs-JlK"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="traveget" id="4SX-wY-sJt">
-                        <barButtonItem key="leftBarButtonItem" title="買ってくる" id="289-iU-7Py">
-                            <connections>
-                                <segue destination="xkH-xb-0hy" kind="push" id="nPO-X0-MwC"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="8AY-jh-bgY">
+                    <navigationItem key="navigationItem" title="travget" id="4SX-wY-sJt">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="8AY-jh-bgY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bZ6-Km-WnJ">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="注文する"/>
+                                <connections>
+                                    <segue destination="2Hy-Zm-sck" kind="modal" id="rUI-gh-FYj"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="2Hy-Zm-sck" kind="push" id="X4n-rm-HA2"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="568"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrn-2s-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576" y="-60"/>
+            <point key="canvasLocation" x="1192" y="-474"/>
         </scene>
         <!--注文-->
         <scene sceneID="bAX-T5-OyO">
@@ -128,7 +121,7 @@
                                 <state key="normal" title="注文マーケットに出す"/>
                                 <connections>
                                     <action selector="saveOrderInfo" destination="2Hy-Zm-sck" eventType="touchUpInside" id="Jj5-VA-63G"/>
-                                    <segue destination="kdB-Xe-m6x" kind="push" id="HGD-qA-2ys"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="Ctk-56-cPR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypl-kX-bLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3138" y="-101"/>
+            <point key="canvasLocation" x="1859" y="177"/>
         </scene>
         <!--買ってくる-->
         <scene sceneID="9DT-VW-Wo5">
@@ -163,72 +156,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1L-bN-Shu">
-                                <rect key="frame" x="20" y="238" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23F-Oq-hz3">
-                                <rect key="frame" x="20" y="184" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chw-5F-krI">
+                                <rect key="frame" x="21" y="20" width="45" height="30"/>
+                                <state key="normal" title="もどる"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-Bg-qp8">
-                                <rect key="frame" x="54" y="420" width="225" height="30"/>
-                                <state key="normal" title="この場所の注文マーケットを見る"/>
+                                <rect key="frame" x="86" y="190" width="150" height="30"/>
+                                <state key="normal" title="この商品を買ってくる"/>
                                 <connections>
-                                    <segue destination="rOV-zt-rJl" kind="push" id="INt-io-orY"/>
+                                    <segue destination="taO-P4-UA7" kind="modal" id="TBQ-kc-MHr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="6AK-BO-Twc"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="買ってくる" id="q4J-i7-y6d"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fno-wZ-4y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="792"/>
-        </scene>
-        <!--買ってくる@- -->
-        <scene sceneID="hLr-Ou-cnP">
-            <objects>
-                <collectionViewController id="rOV-zt-rJl" customClass="BuyCollectionViewController" customModule="Travearn" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lMK-qb-iCx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xiP-7E-GSZ">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mgb-FQ-b9s">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="wCF-GH-arZ" kind="modal" id="uKs-jB-dzu"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="rOV-zt-rJl" id="AdE-gP-eNz"/>
-                            <outlet property="delegate" destination="rOV-zt-rJl" id="m7U-o3-6gF"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="買ってくる@---" id="Kwb-kE-XNB"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qNf-r4-W5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2853" y="798"/>
+            <point key="canvasLocation" x="1350" y="989"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CCR-Sv-uOU">
@@ -283,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOx-84-rFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3354" y="792"/>
+            <point key="canvasLocation" x="925" y="989"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EIr-o8-kgl">
@@ -311,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HtD-8t-64j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3770" y="602"/>
+            <point key="canvasLocation" x="1782" y="976"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="KIl-ye-3xj">
@@ -373,26 +324,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OP-zk5">
-                                <rect key="frame" x="102" y="305" width="70" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Iok-jz-juQ"/>
-                                    <constraint firstAttribute="height" constant="30" id="tgV-5E-bf6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="SignUp"/>
-                                <connections>
-                                    <action selector="toSignUp:" destination="RZp-J9-6u2" eventType="touchUpInside" id="YLI-d1-RAz"/>
-                                    <segue destination="GSn-aR-gPG" kind="push" id="TMu-ww-0Cw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNk-lY-Nht">
-                                <rect key="frame" x="118" y="259" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginBtn:" destination="RZp-J9-6u2" eventType="touchUpInside" id="WUr-Jr-J7y"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzz-DY-vWU">
                                 <rect key="frame" x="172" y="396" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -405,25 +336,54 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9g-Mq-5Zf">
-                                <rect key="frame" x="102" y="434" width="117" height="30"/>
-                                <state key="normal" title="START TRAVGET"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNk-lY-Nht">
+                                <rect key="frame" x="118" y="313" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="AJW-V8-CFF" kind="modal" id="4gq-Dm-a0Y"/>
+                                    <action selector="loginBtn:" destination="RZp-J9-6u2" eventType="touchUpInside" id="WUr-Jr-J7y"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="6cZ-mR-tbk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKR-o4-ScV">
+                                <rect key="frame" x="22" y="434" width="290" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OP-zk5">
+                                <rect key="frame" x="102" y="371" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Iok-jz-juQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="tgV-5E-bf6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="toSignUp:" destination="RZp-J9-6u2" eventType="touchUpInside" id="YLI-d1-RAz"/>
+                                    <segue destination="GSn-aR-gPG" kind="modal" identifier="loginToSignUp" id="2zc-cB-iev"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z71-SM-3il" appends="YES" id="cw1-yR-k4i"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="aM3-uz-HI0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="errorLabel" destination="R7u-B5-67H" id="xLZ-X1-jgf"/>
+                        <outlet property="errorLabel" destination="tKR-o4-ScV" id="0gx-IV-wgh"/>
                         <outlet property="passwordTextField" destination="QVE-5i-Mt7" id="8Ti-Hy-CXt"/>
                         <outlet property="userNameTextField" destination="Msr-xo-mRu" id="Y5g-gn-Jhj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4m-Ur-eUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z71-SM-3il">
+                    <connections>
+                        <action selector="tapScreen:" destination="RZp-J9-6u2" id="d2C-zf-X5H"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="381" y="-755"/>
         </scene>
@@ -454,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggY-1F-wBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208" y="0.0"/>
+            <point key="canvasLocation" x="-190" y="-16"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="YuZ-bC-dVT">
@@ -469,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-SJ-H4e">
-                                <rect key="frame" x="113" y="94" width="94" height="30"/>
+                                <rect key="frame" x="99" y="70" width="94" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="5fM-oM-kUL"/>
                                     <constraint firstAttribute="height" constant="30" id="t02-Zi-dSJ"/>
@@ -545,30 +505,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-pl-QMM">
-                                <rect key="frame" x="135" y="400" width="50" height="30"/>
-                                <state key="normal" title="SignUp"/>
-                                <connections>
-                                    <action selector="signUpBtn:" destination="GSn-aR-gPG" eventType="touchUpInside" id="D2E-Nf-FRO"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3S-PK-FHd">
-                                <rect key="frame" x="135" y="470" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="467" width="320" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuN-mQ-yri">
-                                <rect key="frame" x="90" y="448" width="117" height="30"/>
+                                <rect key="frame" x="64" y="397" width="168" height="98"/>
                                 <state key="normal" title="START TRAVGET"/>
                                 <connections>
-                                    <segue destination="AJW-V8-CFF" kind="modal" id="32u-3w-z6f"/>
+                                    <segue destination="kdB-Xe-m6x" kind="push" id="seh-ax-O3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkE-e5-F1G">
+                                <rect key="frame" x="10" y="7" width="45" height="30"/>
+                                <state key="normal" title="もどる"/>
+                                <connections>
+                                    <segue destination="RZp-J9-6u2" kind="modal" id="jTm-Bu-1dd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-pl-QMM">
+                                <rect key="frame" x="87" y="342" width="123" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.86480971250000005" blue="0.1345365033" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="GSn-aR-gPG" eventType="touchUpInside" id="D2E-Nf-FRO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vhg-aR-Iit" appends="YES" id="chn-5Z-ICO"/>
+                        </connections>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="4uA-wf-PmD"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="NTg-nw-T8a"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="errorLabel" destination="M3S-PK-FHd" id="Bqb-Va-9Ul"/>
                         <outlet property="passwordTextField" destination="AfT-mJ-HD9" id="DwG-ah-WSk"/>
@@ -577,8 +553,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncS-hq-unb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vhg-aR-Iit">
+                    <connections>
+                        <action selector="tapScreen:" destination="GSn-aR-gPG" id="07l-Rb-k89"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="778" y="-755"/>
+            <point key="canvasLocation" x="808" y="-755"/>
         </scene>
         <!--Initial Screen View Controller-->
         <scene sceneID="YSy-bK-lfn">
@@ -607,26 +588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5a-TN-Uz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="-80"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9aE-6S-FuY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tll-g0-8Ol" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mvl-z6-e3a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rOV-zt-rJl" kind="relationship" relationship="rootViewController" id="lMg-y2-kzR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Er5-T9-gLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2434" y="792"/>
+            <point key="canvasLocation" x="530" y="228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jrb-We-w7w">
@@ -634,6 +596,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pnC-CL-GwS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PzS-rX-WgH"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fgC-Dh-y4P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -645,13 +608,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0u-T7-CBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="-94"/>
+            <point key="canvasLocation" x="932" y="228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3PR-qE-OIA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gB2-4A-dnN" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k4L-iA-p5m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -667,9 +631,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="INt-io-orY"/>
-        <segue reference="Yac-jA-iqv"/>
-        <segue reference="X4n-rm-HA2"/>
-        <segue reference="4gq-Dm-a0Y"/>
+        <segue reference="jTm-Bu-1dd"/>
+        <segue reference="seh-ax-O3i"/>
+        <segue reference="rUI-gh-FYj"/>
+        <segue reference="dsz-Fx-4Lr"/>
     </inferredMetricsTieBreakers>
 </document>

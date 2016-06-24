@@ -10,6 +10,7 @@ import UIKit
 import NCMB
 
 class SignUpViewController: UIViewController {
+
     // User Name
     @IBOutlet weak var userNameTextField: UITextField!
     // Password
@@ -48,6 +49,7 @@ class SignUpViewController: UIViewController {
             self.cleanTextField()
             
             return
+            
             
         }
         
