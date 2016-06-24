@@ -9,26 +9,23 @@
 import UIKit
 import NCMB
 
-private let reuseIdentifier = "cell"
+
 
 class CollectionViewController: UICollectionViewController {
+    
+     var merchandiseObjectId: String!
 
-        
-    var wordArray: [AnyObject] = []
-    let saveData = NSUserDefaults.standardUserDefaults()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         
+        self.merchandiseObjectId = merchandiseData!.objectForKey("ObjectId") as String!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         
     }
 
@@ -56,25 +53,38 @@ class CollectionViewController: UICollectionViewController {
         return 1
     }
 
+    func loadOrderData(){
+        let query: NCMBQuery = NCMBQuery(className: "merchandise")
+        query.orderByAscending("createData")
+        query.findObjectsInBackgroundWithBlock({(objects, error) in
+            if error == nil{
+                if objects.count > 0{
+                    self.collectionView!.reloadData()
+                }
+            }else{
+                print(error.localizedDescription)
+        }
+    })
+
+    }
 
    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return wordArray.count
+        return 10
     }
 
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) 
     
-    let nowIndexPathDictionary: (AnyObject) = wordArray [indexPath.row]
-    
-    
-    return cell
+     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
 
+    
+     return cell
 }
 
     }
 
         // Configure the cell
+
 
 
     // MARK: UICollectionViewDelegate

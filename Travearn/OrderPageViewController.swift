@@ -11,69 +11,80 @@ import NCMB
 
 class OrderPageViewController: UIViewController {
     
-    @IBOutlet var descriptiontextfield: UITextField!
+    @IBOutlet var setsumeitextfield: UITextField!
     @IBOutlet var placetextfield: UITextField!
     @IBOutlet var sizetextfield: UITextField!
     @IBOutlet var pricetextfield: UITextField!
     
-    var wordArray: [AnyObject] = []
-    let saveData = NSUserDefaults.standardUserDefaults()
+    var setsumei: String = ""
+    var place: String = ""
+    var size: AnyObject = ""
+    var price: AnyObject = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setsumei = "(例) ACT 参考書"
+        self.place = "(例) Barnes and Nobles, USA"
+        self.size = "(例) 40cm x 30cm"
+        self.price = "(例) $30~40"
         
-        if saveData.arrayForKey("WORD") != nil {
-            wordArray = saveData.arrayForKey("WORD")!
-        }
-    }
+         // クラスのNCMBObjectを作成
+        
+        let obj:NCMBObject = NCMBObject(className: "merchandise")
+       
+  
+        // オブジェクトに値を設定
+    obj.setObject(self.sizetextfield.text!, forKey: "size")
+    obj.setObject(self.placetextfield.text!, forKey: "place")
+    obj.setObject(self.pricetextfield.text!, forKey: "price")
+    obj.setObject(self.setsumeitextfield.text!, forKey: "setsumei")
     
-
-        @IBAction func saveOrderInfo(){
-            let wordDictionary =
-            
-            ["description":descriptiontextfield.text, "place":placetextfield.text, "size":sizetextfield.text, "price":pricetextfield.text]
-            
-            wordArray.append("ここにタイプしてください")
-            saveData.setObject(wordArray, forKey: "WORD")
-            
-    
-    // クラスのNCMBObjectを作成
-    let obj = NCMBObject(className: "OrderInfo")
-    // オブジェクトに値を設定
-    /** 配列 **/
-    obj.setObject(["description", "place", "size", "price"], forKey: "array")
     
     // データストアへの保存を実施
-    obj.saveInBackgroundWithBlock { (error: NSError!) -> Void in
+            
+        obj.saveInBackgroundWithBlock { (error: NSError!) -> Void in
+            
     if error != nil {
-    // 保存に失敗した場合の処理
-    }else{
-        print("保存しました")
-    // 保存に成功した場合の処理
-    }
-    }
-    
-            let alert = UIAlertController.self(
-                title: "登録完了",
-                message: "注文が完了しました",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(
-                UIAlertAction(
-                    title: "OK",
-                    style: UIAlertActionStyle.Default,
-                    handler: nil
-                )
+        
+        // 保存に失敗した場合の処理
+        
+        let alert = UIAlertController.self(
+            title: nil,
+            message: "注文ができませんでした",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: UIAlertActionStyle.Default,
+                handler: nil
             )
-            self.presentViewController(alert, animated: true, completion: nil)
-            descriptiontextfield.text = ""
-            placetextfield.text = ""
-            sizetextfield.text = ""
-            pricetextfield.text = ""
+        )
+    
+    }else{
+        
+        // 保存に成功した場合の処理
+        
+        let alert = UIAlertController.self(
+            title: "注文完了",
+            message: "注文ができました",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: UIAlertActionStyle.Default,
+                handler: nil
+            )
+        )
 
         
+   
     }
+        }
+        }
         // Do any additional setup after loading the view.
+
     
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
