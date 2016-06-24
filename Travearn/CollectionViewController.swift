@@ -81,15 +81,12 @@ class CollectionViewController: UICollectionViewController {
     
     let obj = NCMBObject(className: "merchandise")
     
-    cell.setsumeilabel.text = obj["setsumei"] as String?
-    cell.placelabel.text = obj["place"] as String?
-    cell.sizelabel.text = obj["size"] as String?
-    cell.pricelabel.text = obj["price"] as String?
+   cell.setsumeilabel.text = obj.objectForKey("") as! String?
+    cell.placelabel.text = obj.objectForKey("") as! String?
+    cell.sizelabel.text = obj.objectForKey("") as! String?
+    cell.pricelabel.text = obj.objectForKey("") as! String?
     
     return cell
-}
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
     }
 }
