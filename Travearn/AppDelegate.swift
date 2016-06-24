@@ -13,16 +13,15 @@ import NCMB
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    //********** APIキーの設定 **********
-    let applicationkey = "63a1892a22bcb014ff3cb3f79b8f5523f38a643b4b754438497ffb0ec0a0d844"
-    let clientkey      = "9fba51c047bff92b69a41b483f2d8fb1bfe4859e697769d8004eb78c73d40667"
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        //********** SDKの初期化 **********
-        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
+        //********** APIキーの設定 **********
+        let applicationkey = "63a1892a22bcb014ff3cb3f79b8f5523f38a643b4b754438497ffb0ec0a0d844"
+        let clientkey      = "9fba51c047bff92b69a41b483f2d8fb1bfe4859e697769d8004eb78c73d40667"
         
-
+        func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+            //********** SDKの初期化 **********
+            NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
+        
         //********** データストアにデータを保存 **********
         let query = NCMBQuery(className: "TestClass")
         query.whereKey("message", equalTo: "Hello, NCMB!")

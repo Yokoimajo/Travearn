@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 class OrderPageViewController: UIViewController {
     
@@ -35,25 +36,39 @@ class OrderPageViewController: UIViewController {
             wordArray.append("ここにタイプしてください")
             saveData.setObject(wordArray, forKey: "WORD")
             
+    
+    // クラスのNCMBObjectを作成
+    let obj = NCMBObject(className: "OrderInfo")
+    // オブジェクトに値を設定
+    /** 配列 **/
+    obj.setObject(["description", "place", "size", "price"], forKey: "array")
+    
+    // データストアへの保存を実施
+    obj.saveInBackgroundWithBlock { (error: NSError!) -> Void in
+    if error != nil {
+    // 保存に失敗した場合の処理
+    }else{
+        print("保存しました")
+    // 保存に成功した場合の処理
+    }
+    }
+    
             let alert = UIAlertController.self(
-            title: "登録完了",
-            message: "注文が完了しました",
-            preferredStyle: UIAlertControllerStyle.Alert)
+                title: "登録完了",
+                message: "注文が完了しました",
+                preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: UIAlertActionStyle.Default,
-                handler: nil
-            )
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler: nil
+                )
             )
             self.presentViewController(alert, animated: true, completion: nil)
             descriptiontextfield.text = ""
             placetextfield.text = ""
             sizetextfield.text = ""
             pricetextfield.text = ""
-            
-        }
-    
 
         
         // Do any additional setup after loading the view.

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 private let reuseIdentifier = "Cell"
 
@@ -21,7 +22,6 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView?.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         
-    
         override func viewWillAppear(animated: Bool){
             super.viewWillAppear(animated)
             if saveData.arrayForKey("WORD") != nil {
