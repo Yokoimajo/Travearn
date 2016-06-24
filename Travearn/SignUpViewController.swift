@@ -72,7 +72,6 @@ class SignUpViewController: UIViewController {
                 
             } else {
                 // 新規登録成功時の処理
-            
                 print("ログインに成功しました:\(user.objectId)")
                 
             }

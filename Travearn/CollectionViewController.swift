@@ -81,7 +81,10 @@ class CollectionViewController: UICollectionViewController {
     
     let obj = NCMBObject(className: "merchandise")
     
-   cell.setsumeilabel.text = obj.objectForKey("") as! String?
+    
+    // Configure the cell
+    
+    cell.setsumeilabel.text = obj.objectForKey("") as! String?
     cell.placelabel.text = obj.objectForKey("") as! String?
     cell.sizelabel.text = obj.objectForKey("") as! String?
     cell.pricelabel.text = obj.objectForKey("") as! String?
@@ -91,8 +94,6 @@ class CollectionViewController: UICollectionViewController {
     }
 }
 
-
-        // Configure the cell
 
 
 
