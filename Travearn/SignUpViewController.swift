@@ -9,7 +9,8 @@
 import UIKit
 import NCMB
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController{
+    
 
     // User Name
     @IBOutlet weak var userNameTextField: UITextField!

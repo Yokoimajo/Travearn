@@ -1,7 +1,9 @@
 PODS:
-  - NCMB (2.3.1)
+  - BubbleTransition (1.0.3)
+  - NCMB (2.3.2)
 
 DEPENDENCIES:
+  - BubbleTransition (~> 1.0.0)
   - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
 
 EXTERNAL SOURCES:
@@ -10,12 +12,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NCMB:
-    :commit: 331857ecf6e9c1095b7fcf946e1aab7038499326
+    :commit: 0bc471b471fe23e1346607086576956507d2e35e
     :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
 
 SPEC CHECKSUMS:
-  NCMB: 3decbc3527b85bad06fe1fc3a5cdf93b3bbcd9d9
+  BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
+  NCMB: 0a2d8732ef733a55e8fba69f9fb3d04d442da3a9
 
-PODFILE CHECKSUM: b8d3dc935271fb63f75a9976cfac8385f01a5c82
+PODFILE CHECKSUM: 33200edbf7b5718f83d231645be2e862b464850e
 
 COCOAPODS: 1.0.1

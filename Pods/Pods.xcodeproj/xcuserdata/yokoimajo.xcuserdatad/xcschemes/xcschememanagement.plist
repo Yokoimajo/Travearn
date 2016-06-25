@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BubbleTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NCMB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,11 +32,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02648C30334870A6CCDBF187B12C3FA8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>158647ADAE3F322A0BB828BAB343C64F</key>
 		<dict>
 			<key>primary</key>
@@ -42,7 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7372CA79CE92E7AC032175441663EBE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7CF20A96544A5EC3465DED92D50A127A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A47C57AEA49529B60D270B4459EE528A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

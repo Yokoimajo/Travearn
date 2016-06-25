@@ -8,8 +8,39 @@
 
 import UIKit
 import NCMB
+import BubbleTransition
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    //SignUp画面へ移動//
+    @IBOutlet var transitionButton: UIButton!
+    
+    let transition = BubbleTransition()
+    var startingPoint = CGPointZero
+    var duration = 0.5
+    var transitionMode: BubbleTransitionMode = .Present
+    var bubbleColor: UIColor = .yellowColor()
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let controller = segue.destinationViewController
+    controller.transitioningDelegate = self
+    controller.modalPresentationStyle = .Popover
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    transition.transitionMode = .Present
+    transition.startingPoint = transitionButton.center
+//    transition.bubbleColor = transitionButton.backgroundColor!
+    return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    transition.transitionMode = .Dismiss
+    transition.startingPoint = transitionButton.center
+    transition.bubbleColor = transitionButton.backgroundColor!
+    return transition
+    }
     
 
     // User Name
@@ -103,5 +134,7 @@ class LogInViewController: UIViewController {
     }
     
     let carrentUser = NCMBUser.currentUser()
+    
+    
     
 }

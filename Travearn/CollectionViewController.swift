@@ -8,14 +8,46 @@
 
 import UIKit
 import NCMB
+import BubbleTransition
 
 
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
+    
+    //注文画面へ移動//
+    @IBOutlet var transitionButton: UIButton!
+    
+    let transition = BubbleTransition()
+    var startingPoint = CGPointZero
+    var duration = 0.5
+    var transitionMode: BubbleTransitionMode = .Present
+    var bubbleColor: UIColor = .whiteColor()
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .Custom
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = transitionButton.center
+        transition.bubbleColor = transitionButton.backgroundColor!
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = transitionButton.center
+        transition.bubbleColor = transitionButton.backgroundColor!
+        return transition
+    }
     
     
      var merchandiseObjectId: String!
      var OrderArray: NSArray = NSArray()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,10 +124,8 @@ class CollectionViewController: UICollectionViewController {
     return cell
 
     }
+
 }
-
-
-
 
     // MARK: UICollectionViewDelegate
 

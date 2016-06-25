@@ -15,7 +15,7 @@
 		280307E81D181BBA006D7A6A /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280307E71D181BBA006D7A6A /* OrderPageViewController.swift */; };
 		281CB50D1D1AC3F1008E30B3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */; };
 		281CB50F1D1AC404008E30B3 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281CB50E1D1AC404008E30B3 /* LogOutViewController.swift */; };
-		281CB5531D1D75C9008E30B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281CB5521D1D75C9008E30B3 /* Main.storyboard */; };
+		281CB5571D1E5EF0008E30B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281CB5561D1E5EF0008E30B3 /* Main.storyboard */; };
 		284B16D01D0BE41700617B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16CF1D0BE41700617B02 /* AppDelegate.swift */; };
 		284B16D21D0BE41700617B02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B16D11D0BE41700617B02 /* ViewController.swift */; };
 		284B16D71D0BE41700617B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284B16D61D0BE41700617B02 /* Assets.xcassets */; };
@@ -55,7 +55,7 @@
 		281CB5091D1ABE94008E30B3 /* Travearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travearn-Bridging-Header.h"; sourceTree = "<group>"; };
 		281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		281CB50E1D1AC404008E30B3 /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
-		281CB5521D1D75C9008E30B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		281CB5561D1E5EF0008E30B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		284B16CC1D0BE41700617B02 /* Travearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		284B16CF1D0BE41700617B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		284B16D11D0BE41700617B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				281CB5091D1ABE94008E30B3 /* Travearn-Bridging-Header.h */,
+				2869E6C21D1993EF000CD563 /* LogInViewController.swift */,
 				281CB50C1D1AC3F1008E30B3 /* SignUpViewController.swift */,
 				281CB50E1D1AC404008E30B3 /* LogOutViewController.swift */,
-				2869E6C21D1993EF000CD563 /* LogInViewController.swift */,
 			);
 			name = Membership;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			children = (
 				281CB5101D1ACE5C008E30B3 /* Membership */,
 				284B16CF1D0BE41700617B02 /* AppDelegate.swift */,
-				281CB5521D1D75C9008E30B3 /* Main.storyboard */,
+				281CB5561D1E5EF0008E30B3 /* Main.storyboard */,
 				284B16D11D0BE41700617B02 /* ViewController.swift */,
 				284B16D61D0BE41700617B02 /* Assets.xcassets */,
 				284B16D81D0BE41700617B02 /* LaunchScreen.storyboard */,
@@ -315,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				284B16DA1D0BE41700617B02 /* LaunchScreen.storyboard in Resources */,
-				281CB5531D1D75C9008E30B3 /* Main.storyboard in Resources */,
+				281CB5571D1E5EF0008E30B3 /* Main.storyboard in Resources */,
 				280307E01D15384D006D7A6A /* CollectionViewCell.xib in Resources */,
 				284B16D71D0BE41700617B02 /* Assets.xcassets in Resources */,
 				2869E6C11D19902A000CD563 /* Default-568h@2x.png in Resources */,
