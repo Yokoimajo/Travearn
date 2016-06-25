@@ -109,4 +109,9 @@ class SignUpViewController: UIViewController{
         
     }
     
+    @IBAction func back() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
 }

@@ -14,7 +14,9 @@ import BubbleTransition
 
 class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
     
-    //注文画面へ移動//
+    //注文画面へ移動/
+/*
+//
     @IBOutlet var transitionButton: UIButton!
     
     let transition = BubbleTransition()
@@ -43,7 +45,7 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         transition.bubbleColor = transitionButton.backgroundColor!
         return transition
     }
-    
+    */
     
      var merchandiseObjectId: String!
      var OrderArray: NSArray = NSArray()
@@ -68,8 +70,12 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
 
    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
+    
+
+
+        // Dispose of any resources that can be recreated.
 
     /*
     // MARK: - Navigation

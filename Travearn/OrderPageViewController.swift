@@ -9,8 +9,9 @@
 import UIKit
 import NCMB
 
-class OrderPageViewController: UIViewController {
+class OrderPageViewController: UIViewController, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
+    @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var setsumeitextfield: UITextField!
     @IBOutlet var placetextfield: UITextField!
     @IBOutlet var sizetextfield: UITextField!
@@ -24,12 +25,51 @@ class OrderPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+/*
+//
+
+        @IBAction func selectButtonTapped(sender: UIButton) {
+            
+            let alertController = UIAlertController(title: "画像の取得先を選択", message: nil, preferredStyle: .ActionSheet)
+            let firstAction = UIAlertAction(title: "カメラ", style: .Default){
+                action in
+                self.precentPickerController(.Camera)
+            }
+            let secondAction = UIAlertAction(title: "アルバム", style: .Default) {
+                action in
+                self.precentPickerController(.PhotoLibrary)
+            }
+            let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
+            
+            alertController.addAction(firstAction)
+            alertController.addAction(secondAction)
+            alertController.addAction(cancelAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+// */
         
         self.setsumei = "(例) ACT 参考書"
         self.place = "(例) Barnes and Nobles, USA"
         self.size = "(例) 40cm x 30cm"
         self.price = "(例) $30~40"
         
+        func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
+            if UIImagePickerController.isSourceTypeAvailable(sourceType){
+                let picker = UIImagePickerController()
+                picker.sourceType = sourceType
+                picker.delegate = self
+                
+                self.presentViewController(picker, animated: true, completion: nil)
+        }
+        }
+        
+        func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: NSDictionary!) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            photoImageView.image = image
+        }
          // クラスのNCMBObjectを作成
         
         let obj:NCMBObject = NCMBObject(className: "merchandise")
@@ -95,6 +135,12 @@ class OrderPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func backToMain(){
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
     
 
     /*

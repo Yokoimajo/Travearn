@@ -107,6 +107,11 @@ class LogInViewController: UIViewController, UIViewControllerTransitioningDelega
         
     }
     
+    @IBAction func back(segue: UIStoryboardSegue){
+        
+    }
+
+    
     // 背景タップするとキーボードを隠す
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
