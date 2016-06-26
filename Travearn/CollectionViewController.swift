@@ -14,39 +14,6 @@ import BubbleTransition
 
 class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
     
-    //注文画面へ移動/
-/*
-//
-    @IBOutlet var transitionButton: UIButton!
-    
-    let transition = BubbleTransition()
-    var startingPoint = CGPointZero
-    var duration = 0.5
-    var transitionMode: BubbleTransitionMode = .Present
-    var bubbleColor: UIColor = .whiteColor()
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let controller = segue.destinationViewController
-        controller.transitioningDelegate = self
-        controller.modalPresentationStyle = .Custom
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .Present
-        transition.startingPoint = transitionButton.center
-        transition.bubbleColor = transitionButton.backgroundColor!
-        return transition
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .Dismiss
-        transition.startingPoint = transitionButton.center
-        transition.bubbleColor = transitionButton.backgroundColor!
-        return transition
-    }
-    */
-    
      var merchandiseObjectId: String!
      var OrderArray: NSArray = NSArray()
 
@@ -55,15 +22,13 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         super.viewDidLoad()
         
         //self.merchandiseObjectId = merchandiseData!.objectForKey("ObjectId") as String!
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
+    // セルの登録
+    collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier:"cell")
         
-        collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        
-        
+    self.loadOrderData()
     }
 
         // Do any additional setup after loading the view.
@@ -72,28 +37,25 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         super.didReceiveMemoryWarning()
     
     }
-    
 
-
-        // Dispose of any resources that can be recreated.
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 4
+    
+    //取得データの数
+    if self.OrderArray.count > 0 {
+        return self.OrderArray.count
+    } else {
+        return 0
+    }
     }
 
+     //nifty cloudからの読み込み
     func loadOrderData(){
         let query: NCMBQuery = NCMBQuery(className: "merchandise")
         query.orderByAscending("createData")
@@ -119,19 +81,27 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
     
     let obj = NCMBObject(className: "merchandise")
     
-    
     // Configure the cell
     
-    cell.setsumeilabel.text = obj.objectForKey("") as! String?
-    cell.placelabel.text = obj.objectForKey("") as! String?
-    cell.sizelabel.text = obj.objectForKey("") as! String?
-    cell.pricelabel.text = obj.objectForKey("") as! String?
+    cell.setsumeilabel.text = obj.objectForKey("setsumei") as! String?
+    cell.placelabel.text = obj.objectForKey("place") as! String?
+    cell.sizelabel.text = obj.objectForKey("size") as! String?
+    cell.pricelabel.text = obj.objectForKey("price") as! String?
     
     return cell
 
     }
 
 }
+
+
+
+
+
+
+
+
+
 
     // MARK: UICollectionViewDelegate
 
@@ -163,3 +133,44 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
     
     }
     */
+
+//注文画面へ移動/
+/*
+//
+@IBOutlet var transitionButton: UIButton!
+
+let transition = BubbleTransition()
+var startingPoint = CGPointZero
+var duration = 0.5
+var transitionMode: BubbleTransitionMode = .Present
+var bubbleColor: UIColor = .whiteColor()
+
+
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+let controller = segue.destinationViewController
+controller.transitioningDelegate = self
+controller.modalPresentationStyle = .Custom
+}
+
+func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+transition.transitionMode = .Present
+transition.startingPoint = transitionButton.center
+transition.bubbleColor = transitionButton.backgroundColor!
+return transition
+}
+
+func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+transition.transitionMode = .Dismiss
+transition.startingPoint = transitionButton.center
+transition.bubbleColor = transitionButton.backgroundColor!
+return transition
+}
+
+//各値をセルに入れる
+let OrderInfo: AnyObject = self.OrderArray[indexPath.row]
+print(OrderInfo)
+cell.setsumeilabel.text = OrderInfo.objectForKey("setsumei") as? String
+cell.placelabel.text = OrderInfo.objectForKey("place") as? String
+cell.sizelabel.text = OrderInfo.objectForKey("size") as? String
+cell.pricelabel.text = OrderInfo.objectForKey("price") as? String
+*/

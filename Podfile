@@ -8,7 +8,6 @@ target 'Travearn' do
 	pod ‘NCMB’, :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
     
     pod 'BubbleTransition', '~> 1.0.0'
-    
  
     
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
