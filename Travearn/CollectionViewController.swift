@@ -8,9 +8,6 @@
 
 import UIKit
 import NCMB
-import BubbleTransition
-
-
 
 class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
     
