@@ -12,9 +12,6 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="241" height="275"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKP-k6-gGh">
-                        <rect key="frame" x="8" y="8" width="227" height="166"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-qX-Yao">
                         <rect key="frame" x="8" y="207" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,11 +36,15 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA3-eF-c8I">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="169"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <size key="customSize" width="241" height="275"/>
             <connections>
+                <outlet property="image" destination="gA3-eF-c8I" id="Cgp-wZ-QhT"/>
                 <outlet property="placelabel" destination="bg4-qX-Yao" id="WwG-70-aRO"/>
                 <outlet property="pricelabel" destination="yim-P3-2hd" id="44o-CM-tmJ"/>
                 <outlet property="setsumeilabel" destination="0vX-so-QZK" id="XSe-6a-k9u"/>

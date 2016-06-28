@@ -72,7 +72,7 @@ class LogInViewController: UIViewController, UIViewControllerTransitioningDelega
         
     // ユーザー名とパスワードでログイン
     NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
-            
+    
         if error != nil{
             print("Login Failed\(error)")
             let error = UIAlertController(

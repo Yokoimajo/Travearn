@@ -77,6 +77,7 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
     
     let obj = NCMBObject(className: "merchandise")
+
     
     // Configure the cell
     

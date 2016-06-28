@@ -17,6 +17,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var placelabel: UILabel!
     @IBOutlet var sizelabel: UILabel!
     @IBOutlet var pricelabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
         // 取得に成功した場合の処理
     

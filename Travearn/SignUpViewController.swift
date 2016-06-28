@@ -32,7 +32,12 @@ class SignUpViewController: UIViewController{
         
     }
     
-    // SignUpボタン押下時の距離
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // SignUpボタン押下時
     @IBAction func signUpBtn(sender: UIButton) {
 
         //パスワードが一致の時
@@ -81,7 +86,7 @@ class SignUpViewController: UIViewController{
             print("hoge")
             let errorAlert = UIAlertController(
                 title: "パスワードが一致しません",
-                message: "入力し直してください",
+                message: "入力しなおしてください",
                 preferredStyle: UIAlertControllerStyle.Alert
             )
             errorAlert.addAction(

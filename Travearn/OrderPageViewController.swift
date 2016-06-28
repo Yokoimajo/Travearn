@@ -22,34 +22,10 @@ class OrderPageViewController: UIViewController, UINavigationControllerDelegate,
     var size: AnyObject = ""
     var price: AnyObject = ""
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-/*
-//
-
-        @IBAction func selectButtonTapped(sender: UIButton) {
-            
-            let alertController = UIAlertController(title: "画像の取得先を選択", message: nil, preferredStyle: .ActionSheet)
-            let firstAction = UIAlertAction(title: "カメラ", style: .Default){
-                action in
-                self.precentPickerController(.Camera)
-            }
-            let secondAction = UIAlertAction(title: "アルバム", style: .Default) {
-                action in
-                self.precentPickerController(.PhotoLibrary)
-            }
-            let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
-            
-            alertController.addAction(firstAction)
-            alertController.addAction(secondAction)
-            alertController.addAction(cancelAction)
-            
-            presentViewController(alertController, animated: true, completion: nil)
-            
-        }
-// */
+        
         
         self.setsumei = "(例) ACT 参考書"
         self.place = "(例) Barnes and Nobles, USA"
@@ -126,22 +102,22 @@ class OrderPageViewController: UIViewController, UINavigationControllerDelegate,
         self.navigationController?.popViewControllerAnimated(true)
         
     }
-
     
-        func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
-            if UIImagePickerController.isSourceTypeAvailable(sourceType){
-                let picker = UIImagePickerController()
-                picker.sourceType = sourceType
-                picker.delegate = self
-                
-                self.presentViewController(picker, animated: true, completion: nil)
-        }
-        }
-        func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: NSDictionary!) {
-            self.dismissViewControllerAnimated(true, completion: nil)
+    
+    func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType){
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.delegate = self
             
-            photoImageView.image = image
+            self.presentViewController(picker, animated: true, completion: nil)
         }
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: NSDictionary!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        photoImageView.image = image
+    }
     
     @IBAction func selectButtonTapped(sender: UIButton) {
         
@@ -163,18 +139,42 @@ class OrderPageViewController: UIViewController, UINavigationControllerDelegate,
         presentViewController(alertController, animated: true, completion: nil)
         
     }
-
     
     
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    /*
+    //
+    
+    @IBAction func selectButtonTapped(sender: UIButton) {
+    
+    let alertController = UIAlertController(title: "画像の取得先を選択", message: nil, preferredStyle: .ActionSheet)
+    let firstAction = UIAlertAction(title: "カメラ", style: .Default){
+    action in
+    self.precentPickerController(.Camera)
+    }
+    let secondAction = UIAlertAction(title: "アルバム", style: .Default) {
+    action in
+    self.precentPickerController(.PhotoLibrary)
+    }
+    let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
+    
+    alertController.addAction(firstAction)
+    alertController.addAction(secondAction)
+    alertController.addAction(cancelAction)
+    
+    presentViewController(alertController, animated: true, completion: nil)
+    
+    }
+    // */
+    
 }
